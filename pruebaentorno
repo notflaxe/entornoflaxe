@@ -1,0 +1,34 @@
+from datetime import datetime
+now = datetime.now()
+
+
+def saludo(nombre):
+    if now.hour < 14:
+        print("Buenos días, " + nombre)
+    elif now.hour < 21:
+        print("Buenas tardes, " + nombre)
+    else:
+        print("Buenas noches, " + nombre)
+
+
+def dimedad():
+    return int(input("dime tu edad: "))
+
+def automata(personalidad):
+    if personalidad == "simpatico":
+        nombre = input("Keloke tu dise como te llamas: ")
+        saludo(nombre)
+        edad = dimedad()
+        if edad > 18 and now.hour >= 20:
+            print("Vamos a hacer un atraco de gangsters, lo saben los seven")
+        elif edad > 18 and now.hour < 20:
+            print("Inyectémonos heroína en ese caso")
+
+    if personalidad == "agresivo":
+        nombre = input("hijoputa como es tu nombre de escoria: ")
+        saludo(nombre)
+        edad = dimedad()
+        if edad > 18 and now.hour >= 20:
+            print("Iremos a atracar un banco hijodeperra y luego te mataré")
+        elif edad > 18 and now.hour < 20:
+            print("Te voy a robar la cartera")
